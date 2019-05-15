@@ -1,0 +1,26 @@
+{
+  "name": "lotus-events",
+  "version": "1.0.0",
+  "description": "An app used to add and update events for Lotus!",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lotus-1/Lotus-Events.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lotus-1/Lotus-Events/issues"
+  },
+  "homepage": "https://github.com/lotus-1/Lotus-Events#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "pg": "^7.11.0"
+  }
+}
