@@ -1,56 +1,52 @@
 BEGIN
 
-DROP TABLE IF EXISTS USERS CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
-CREATE TABLE USERS (
+CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
 );
 
-INSERT INTO USERS (name) VALUES
+INSERT INTO users (name) VALUES
 ('Sahar'),
 ('Maha'),
 ('Mynah');
 
-CREATE TABLE EVENTS (
+DROP TABLE IF EXISTS events CASCADE;
+
+CREATE TABLE events (
   id SERIAL PRIMARY KEY,
-  USER_id INTEGER FOREIGN KEY,
-  event VARCHAR(100) NOT NULL;
+  users_id INTEGER FOREIGN KEY,
+  event text(1000) NOT NULL;
+  event_date DATE NOT NULL;
 );
 
-INSERT INTO EVENTS (event) VALUES
-("Sahar's birthday"),
-("Meeting with Intel company"),
-("First day of holiday");
+INSERT INTO events (event) VALUES
+("Sahar's birthday in 4.6.2019"),
+("Meeting with Intel company in 27.5.2019"),
+("First day of holiday in 30.5.2019");
 );
 
-CREATE TABLE EVENTS_DATE (
+DROP TABLE IF EXISTS comments CASCADE;
+
+CREATE TABLE comments (
   id SERIAL PRIMARY KEY,
-  EVENTS_id INTEGER FOREIGN KEY,
-  date_event DATE NOT NULL;
+  events_id INTEGER FOREIGN KEY,
+  users_id INTEGER FOREIGN KEY,
+  comment text(1000) NOT NULL;
 );
 
-INSERT INTO EVENTS_DATE (date_event) VALUES
-("4.6.2019"),
-("27.5.2019"),
-("30.5.2019");
-);
-
-CREATE TABLE COMMENTS (
-  id SERIAL PRIMARY KEY,
-  EVENTS_id INTEGER FOREIGN KEY,
-  comment VARCHAR(1000) NOT NULL;
-);
-
-INSERT INTO COMMENTS (comment) VALUES
+INSERT INTO comments (comment) VALUES
 ("We have a party at Sahar's home at 17:00"),
 ("The meeting will be held in Lotus at 12:00"),
 ("Enjoy your holiday week, see you in 7 of June");
 );
 
-CREATE TABLE CONNECTIONS (
-  USER_id INTEGER FOREIGN KEY,
-  EVENTS_id INTEGER FOREIGN KEY;
+DROP TABLE IF EXISTS connections CASCADE;
+
+CREATE TABLE connections (
+  users_id INTEGER FOREIGN KEY,
+  events_id INTEGER FOREIGN KEY;
 );
 
 COMMIT;
