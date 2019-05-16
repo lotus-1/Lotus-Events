@@ -21,10 +21,10 @@ CREATE TABLE events (
   event_date DATE NOT NULL;
 );
 
-INSERT INTO events (event) VALUES
-("Sahar's birthday in 4.6.2019"),
-("Meeting with Intel company in 27.5.2019"),
-("First day of holiday in 30.5.2019");
+INSERT INTO events (event, event_date) VALUES
+("Sahar's birthday, 4.6.2019"),
+("Meeting with Intel company, 27.5.2019"),
+("First day of holiday, 30.5.2019");
 );
 
 DROP TABLE IF EXISTS comments CASCADE;

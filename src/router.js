@@ -1,9 +1,9 @@
 const {
   homeHandler,
-  getUsersHandler,
+  getEventsHandler,
+  postEventsHandler,
   publicHandler,
-  errorHandler,
-  createUserHandler
+  errorHandler
 } = require("./handlers");
 
 const router = (request, response) => {
@@ -11,12 +11,12 @@ const router = (request, response) => {
 
   if (url === "/") {
     homeHandler(response);
-  } else if (url === "/users") {
-    getUsersHandler(response);
+  } else if (url === "/add-event") {
+    getEventsHandler(response);
   } else if (url.includes("public")) {
     publicHandler(url, response);
-  } else if (url === "/create-user") {
-    createUserHandler(response);
+  } else if (url === "/post-event") {
+    postEvents(response);
   } else {
     errorHandler(response);
   }
