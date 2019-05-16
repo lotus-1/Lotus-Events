@@ -1,52 +1,43 @@
-BEGIN
+BEGIN;
 
 DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS events CASCADE;
+DROP TABLE IF EXISTS comments CASCADE;
+-- DROP TABLE IF EXISTS connections CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL
 );
-
-INSERT INTO users (name) VALUES
-('Sahar'),
-('Maha'),
-('Mynah');
-
-DROP TABLE IF EXISTS events CASCADE;
-
 CREATE TABLE events (
-  id SERIAL PRIMARY KEY,
-  users_id INTEGER FOREIGN KEY,
-  event text(1000) NOT NULL;
-  event_date DATE NOT NULL;
+  id_events SERIAL PRIMARY KEY,
+  event VARCHAR(1000) NOT NULL,
+  event_date DATE NOT NULL
+  -- FOREIGN KEY (id_events) REFERENCES even(id)
 );
-
-INSERT INTO events (event, event_date) VALUES
-("Sahar's birthday, 4.6.2019"),
-("Meeting with Intel company, 27.5.2019"),
-("First day of holiday, 30.5.2019");
-);
-
-DROP TABLE IF EXISTS comments CASCADE;
-
 CREATE TABLE comments (
-  id SERIAL PRIMARY KEY,
-  events_id INTEGER FOREIGN KEY,
-  users_id INTEGER FOREIGN KEY,
-  comment text(1000) NOT NULL;
-);
+  id_comments SERIAL PRIMARY KEY,
+  comment VARCHAR(1000) NOT NULL,
+  id INTEGER REFERENCES users(id),
+  id_events INTEGER REFERENCES events(id_events)
 
-INSERT INTO comments (comment) VALUES
-("We have a party at Sahar's home at 17:00"),
-("The meeting will be held in Lotus at 12:00"),
-("Enjoy your holiday week, see you in 7 of June");
 );
+-- CREATE TABLE connections (
+--     FOREIGN KEY (id_comments) REFERENCES events(id_events),
+--     FOREIGN KEY (id) REFERENCES users(id_events)
+-- );
 
-DROP TABLE IF EXISTS connections CASCADE;
+INSERT INTO users (name) VALUES ('Sahar');
+INSERT INTO users (name) VALUES ('Maha');
+INSERT INTO users (name) VALUES ('Mynah');
 
-CREATE TABLE connections (
-  users_id INTEGER FOREIGN KEY,
-  events_id INTEGER FOREIGN KEY;
-);
+INSERT INTO events (event, event_date) VALUES('Sahar birthday', '4.6.2019');
+INSERT INTO events (event, event_date) VALUES('Meeting with Intel company', '27.5.2019');
+INSERT INTO events (event, event_date) VALUES('First day of holiday', '30.5.2019');
+
+INSERT INTO comments (comment) VALUES('We have a party at Sahar home at 17:00');
+INSERT INTO comments (comment) VALUES('The meeting will be held in Lotus at 12:00');
+INSERT INTO comments (comment) VALUES('Enjoy your holiday week, see you in 7 of June');
+
 
 COMMIT;
