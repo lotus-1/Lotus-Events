@@ -1,13 +1,13 @@
 const tape = require('tape');
 const runDBbuild = require('../src/database/db_build');
-const getEvent = require('../src/database/dynamic.js');
+const {getUsers, getEvents, getComments } = require('../src/queries/getEvents');
 
 tape('tape is working', t => {
   t.equals(1, 1, 'one equals one');
   t.end();
 });
 
-tape('getEvent returns all users' t => {
+tape('getEvent returns all users', t => {
 runDBbuild((err, res) => {
   const expected = 'Sahar';
   getData((e, data) => {

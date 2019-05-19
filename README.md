@@ -28,7 +28,7 @@
 
 ### This is Schema of the data base :high_brightness:
 
-![img](./assets/Screenshot from 2019-05-18 22-32-54.png)
+![img](./assets/schema.png)
 
 ### Contact Details : :telephone_receiver:
 
