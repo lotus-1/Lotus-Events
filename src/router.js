@@ -9,14 +9,14 @@ const {
 const router = (request, response) => {
   const { url } = request;
 
-  if (url === "/") {
+  if (request.url === "/") {
     homeHandler(response);
-  } else if (url === "/add-event") {
-    getEventsHandler(response);
-  } else if (url.includes("public")) {
+  } else if (request.url.indexOf("/add-event") !== -1) {
+    postEventsHandler(request, response);
+  } else if (request.url.indexOf("/public") !== -1) {
     publicHandler(url, response);
-  } else if (url === "/post-event") {
-    postEvents(response);
+  } else if (request.url.indexOf("/events") !== -1) {
+    getEventsHandler(response);
   } else {
     errorHandler(response);
   }
