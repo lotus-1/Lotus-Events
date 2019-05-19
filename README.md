@@ -34,8 +34,8 @@
 
 #### If you have any question or suggestions. please free to contact us.
 
- #### :large_blue_diamond: Sahar : @saharsaker
- #### :large_blue_diamond: Maha : @maha276
+ #### :large_blue_diamond: Sahar Saker : @saharsaker
+ #### :large_blue_diamond: Maha Foro: @maha276
 
 #### Hope you like it :innocent:
 #### Thank you for visiting :two_hearts:
