@@ -28,14 +28,14 @@
 
 ### This is Schema of the data base :high_brightness:
 
-![](/home/sahar/Lotus/week-6/Lotus-Events/assets/Screenshot from 2019-05-18 22-32-54.png)
+![img](./assets/Screenshot from 2019-05-18 22-32-54.png)
 
 ### Contact Details : :telephone_receiver:
 
 #### If you have any question or suggestions. please free to contact us.
 
- #### :large_blue_diamond: Sahar : @saharsaker
- #### :large_blue_diamond: Maha : @maha276
+ #### :large_blue_diamond: Sahar Saker : @saharsaker
+ #### :large_blue_diamond: Maha Foro: @maha276
 
 #### Hope you like it :innocent:
 #### Thank you for visiting :two_hearts:
