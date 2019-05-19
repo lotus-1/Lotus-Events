@@ -1,13 +1,51 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="public/main.css" />
     <title>Lotus-Events</title>
   </head>
   <body>
     <h1>Lotus Events</h1>
     <form class="form" action="/add-event" method="post">
-    <input type="text" name="" value="" placeholder="Created by"><br><br>
+      <input
+        type="text"
+        name="user"
+        value=""
+        placeholder="Created by"
+      /><br /><br />
+      <input
+        type="text"
+        name="date"
+        value=""
+        placeholder="Event Date"
+      /><br /><br />
+      <input
+        type="text"
+        name="event"
+        value=""
+        placeholder="Event"
+      /><br /><br />
+      <input
+        type="text"
+        name="comment"
+        value=""
+        placeholder="Comments"
+      /><br /><br />
+      <button type="submit" name="button">Add event</button>
+    </form>
+    <div class="table-container">
+      <table id="events-table">
+        <tr>
+          <th>Created by</th>
+          <th>Event</th>
+          <th>Event-date</th>
+          <th>Comments</th>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" src="public/main.js"></script>
+<input "text" name="" value="" placeholder="Created by"><br><br>
     <input type="text" name="" value="" placeholder="Event Date"><br><br>
     <input type="text" name="" value="" placeholder="Event"><br><br>
     <input type="text" name="" value="" placeholder="Comments"><br><br>
