@@ -1,4 +1,12 @@
-/* #events-table {
+body {
+  background-image: url(https://st2.depositphotos.com/1755195/10307/i/950/depositphotos_103073486-stock-photo-blue-and-pink-color-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+#events-table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -17,5 +25,5 @@ th {
   padding-bottom: 12px;
   text-align: left;
   background-color: pink;
-  color: white;
-} */
+  color: black;
+}
