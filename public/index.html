@@ -7,34 +7,54 @@
   </head>
   <body>
     <h1>Lotus Events</h1>
+    <section class="login">
+      <form action="/login" method="POST">
+        <input type="text" name="" value="" placeholder="Enter Your Email" />
+        <br />
+        <br />
+        <input type="text" name="" value="" placeholder="Enter Your Password" />
+        <br />
+        <br />
+        <button type="submit">Login</button>
+      </form>
+      <br />
+      <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+      </form>
+    </section>
     <form class="form" action="/add-event" method="post">
-      <input id="userName"
+      <input
+        id="userName"
         type="text"
         name="user"
         value=""
         placeholder="Created by"
       /><br /><br />
-      <input id="date"
+      <input
+        id="date"
         type="text"
         name="date"
         value=""
         placeholder="Event Date"
       /><br /><br />
-      <input id="eventName"
+      <input
+        id="eventName"
         type="text"
         name="event"
         value=""
         placeholder="Event"
       /><br /><br />
-      <input id="comment"
+      <input
+        id="comment"
         type="text"
         name="comment"
         value=""
         placeholder="Comments"
       /><br /><br />
-      <button id ="button" type="submit" name="">Add event</button>
+      <button id="button" type="submit" name="">Add event</button>
     </form>
-    <div class="table-container">
+    <br />
+    <section class="table-container">
       <table id="events-table">
         <tr>
           <th>Created by</th>
@@ -43,7 +63,8 @@
           <th>Comments</th>
         </tr>
       </table>
-    </div>
+    </section>
+
     <script type="text/javascript" src="public/main.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@ const {
   getEventsHandler,
   postEventsHandler,
   publicHandler,
+  loginHandler,
   errorHandler
 } = require("./handlers");
 
@@ -17,6 +18,8 @@ const router = (request, response) => {
     publicHandler(url, response);
   } else if (request.url.indexOf("/events") !== -1) {
     getEventsHandler(response);
+  } else if (request.url.indexOf("/login") !== -1) {
+    loginHandler(request, response);
   } else {
     errorHandler(response);
   }

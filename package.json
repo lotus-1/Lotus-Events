@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/lotus-1/Lotus-Events#readme",
   "dependencies": {
+    "cookie": "^0.4.0",
+    "cookie-signature": "^1.1.0",
     "dotenv": "^8.0.0",
+    "jsonwebtoken": "^8.5.1",
     "pg": "^7.11.0",
     "query-string": "^6.5.0"
   },
