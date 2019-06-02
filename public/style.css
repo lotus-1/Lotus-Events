@@ -1,10 +1,10 @@
 body {
-  background-image: url(https://st2.depositphotos.com/1755195/10307/i/950/depositphotos_103073486-stock-photo-blue-and-pink-color-background.jpg);
+  background-image: url(https://image.freepik.com/vector-gratis/fondo-degradado-pastel-multicolor_1962-500.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: center;
 }
-
 
 #events-table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -24,6 +24,10 @@ th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: pink;
+  background-color: #9999ff;
   color: black;
+}
+
+.login {
+  text-align: left;
 }
