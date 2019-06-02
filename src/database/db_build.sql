@@ -3,6 +3,7 @@ BEGIN;
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS events CASCADE;
 DROP TABLE IF EXISTS comments CASCADE;
+DROP TABLE IF EXISTS sign CASCADE;
 
 
 CREATE TABLE users (
@@ -23,18 +24,24 @@ CREATE TABLE comments (
 
 );
 
+CREATE TABLE sign (
+  userId SERIAL PRIMARY KEY,
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(100) NOT NULL
+);
 
-INSERT INTO users (name) VALUES ('Sahar');
-INSERT INTO users (name) VALUES ('Maha');
-INSERT INTO users (name) VALUES ('Mynah');
 
-INSERT INTO events (events, event_date) VALUES('Sahar birthday', '4.6.2019');
-INSERT INTO events (events, event_date) VALUES('Meeting with Intel company', '27.5.2019');
-INSERT INTO events (events, event_date) VALUES('First day of holiday', '30.5.2019');
-
-INSERT INTO comments (comment) VALUES('We have a party at Sahar home at 17:00');
-INSERT INTO comments (comment) VALUES('The meeting will be held in Lotus at 12:00');
-INSERT INTO comments (comment) VALUES('Enjoy your holiday week, see you in 7 of June');
+-- INSERT INTO users (name) VALUES ('Sahar');
+-- INSERT INTO users (name) VALUES ('Maha');
+-- INSERT INTO users (name) VALUES ('Mynah');
+--
+-- INSERT INTO events (events, event_date) VALUES('Sahar birthday', '4.6.2019');
+-- INSERT INTO events (events, event_date) VALUES('Meeting with Intel company', '27.5.2019');
+-- INSERT INTO events (events, event_date) VALUES('First day of holiday', '30.5.2019');
+--
+-- INSERT INTO comments (comment) VALUES('We have a party at Sahar home at 17:00');
+-- INSERT INTO comments (comment) VALUES('The meeting will be held in Lotus at 12:00');
+-- INSERT INTO comments (comment) VALUES('Enjoy your holiday week, see you in 7 of June');
 
 
 COMMIT;

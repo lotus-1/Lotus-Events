@@ -1,6 +1,5 @@
 const dbConnection = require("../database/db_connection.js");
 
-
 // const postData = (name, events ,event_date, comment, ((err, res) => {
 //   dbConnection.query(
 //     "INSERT INTO users (name) VALUES ($1)",
@@ -16,7 +15,7 @@ const dbConnection = require("../database/db_connection.js");
 //   })
 // );
 
-const postUsers = (name ,cb) => {
+const postUsers = (name, cb) => {
   dbConnection.query(
     `INSERT INTO users (name) VALUES ($1)`,
     [name],
@@ -38,7 +37,6 @@ const postEvents = (events, event_date, cb) => {
   );
 };
 
-
 const postComments = (comment, cb) => {
   dbConnection.query(
     `INSERT INTO comments (comment) VALUES ($1)`,
@@ -50,8 +48,20 @@ const postComments = (comment, cb) => {
   );
 };
 
+const postSign = (sign, cb) => {
+  dbConnection.query(
+    `INSERT INTO sign (email, password) VALUES ($1, $2)`,
+    [email, password],
+    (err, res) => {
+      if (err) return cb(err);
+      cb(null, res);
+    }
+  );
+};
+
 module.exports = {
   postUsers,
   postEvents,
-  postComments
-}
+  postComments,
+  postSign
+};
