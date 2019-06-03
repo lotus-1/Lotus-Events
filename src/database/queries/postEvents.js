@@ -1,4 +1,4 @@
-const dbConnection = require("../database/db_connection.js");
+const dbConnection = require("../db_connection.js");
 
 // const postData = (name, events ,event_date, comment, ((err, res) => {
 //   dbConnection.query(
