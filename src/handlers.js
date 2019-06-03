@@ -5,8 +5,16 @@ const bcrypt = require("bcryptjs");
 const { parse } = require("cookie");
 const { sign, verify } = require("jsonwebtoken");
 
-const { getUsers, getEvents, getComments } = require("./queries/getEvents");
-const { postUsers, postEvents, postComments } = require("./queries/postEvents");
+const {
+  getUsers,
+  getEvents,
+  getComments
+} = require("./database/queries/getEvents");
+const {
+  postUsers,
+  postEvents,
+  postComments
+} = require("./database/queries/postEvents");
 const serverError = (err, response) => {
   response.writeHead(401, "Content-Type:text/html");
   response.end("<h1>Sorry, there was a problem loading the homepage</h1>");
