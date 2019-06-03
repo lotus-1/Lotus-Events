@@ -1,7 +1,7 @@
 const dbConnection = require("../database/db_connection.js");
 
 const getUsers = cb => {
-    dbConnection.query("SELECT * FROM users", (err, res) => {
+  dbConnection.query("SELECT * FROM users", (err, res) => {
     if (err) return cb(err);
     console.log("res.rows: " + res.rows);
     cb(null, res.rows);
@@ -23,8 +23,18 @@ const getComments = cb => {
     cb(null, res.rows);
   });
 };
+
+const getSign = cb => {
+  dbConnection.query("SELECT * FROM sign", (err, res) => {
+    if (err) return cb(err);
+    console.log("res.rows: " + res.rows);
+    cb(null, res.rows);
+  });
+};
+
 module.exports = {
   getUsers,
   getEvents,
-  getComments
+  getComments,
+  getSign
 };

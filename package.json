@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/lotus-1/Lotus-Events#readme",
   "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
     "cookie": "^0.4.0",
     "cookie-signature": "^1.1.0",
     "dotenv": "^8.0.0",
